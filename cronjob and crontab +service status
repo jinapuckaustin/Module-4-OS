@@ -1,0 +1,14 @@
+##Cronjobs, a method of persistance#
+The cron daemon checks the directories 
+  /var/spool/cron, #user cronjobs 
+  /etc/cron.d
+  /etc/crontab #system cronjobs
+once a minute and executes any commands specified that match the time.
+
+  crontab -u [user] #file This command will load the crontab data from the specified fil
+  crontab -l -u [user] #This command will display/list user’s crontab contents
+  crontab -r -u [user] #This Command will remove user’s crontab contents
+  crontab -e -u [user] #This command will edit user’s crontab contents
+  
+persistance in the config
+  cat /etc/inittab #to check
