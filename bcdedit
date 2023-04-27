@@ -1,0 +1,22 @@
+# bcdedit #
+backing and restoring up the cbd 
+  bcdedit /export C:\boot_bk
+  bcdedit /import C:\boot_bk
+creating an entry 
+  bcdedit /create {ntldr} /d "Windows XP Pro SP2 - Tiger Paw"
+chaging an enrty
+  bcdedit /set {<identifier>} description "Windows 7 - Lion Den" (1)
+specifying a partition
+  bcdedit /set {ntldr} device partition=C:
+specifying the display order 
+  bcdedit /displayorder {ntldr} /addfirst
+delete the legacy operating system
+  bcdedit /delete {ntldr} /f
+add safe boot 
+  bcdedit /set {default} safeboot minimal
+day geet oo hey!!!
+  bcdedit /deletevalue {current} safeboot
+change/set timeout value
+  bcdedit /set {bootmgr} timeout 29
+goo won den day caw dem oo hey nuh!!!
+  bcdedit /deletevalue {bootmgr} timeout
