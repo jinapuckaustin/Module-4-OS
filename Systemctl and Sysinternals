@@ -1,0 +1,44 @@
+#list unti dependancies in tree format
+    systemctl list-dependancies graphical.target
+
+#show wants to individual targets
+    systemctl show -p Wants graphical.target
+
+#list every individual unit file
+    systemctl list-unit-files
+    
+Procmon
+    ./procmon.exe #real time file system, registry, and process/thread activity.
+    
+Autoruns
+    ./autoruns.exe #analyze windows startup environment
+        Pink - Means no publisher information was found or the digital signature doesn’t exist or match.
+        Green - Used when comparing previous set of Autorun data to indicate an item wasn’t there last time.
+        Yellow - The startup entry is there, but the file or job it points to doesn’t exist anymore.
+        
+procexp
+    ./procexp
+    
+TCPView
+        ./TCPView.exe #shows detailed listings of all TCP and UDP endpoints on your system,
+        including the local and remote addresses and state of TCP connections.
+        
+PsExec
+    ./PsExec.exe #lets you execute processes on other systems,
+    complete with full interactivity for console applications, without having to manually install client software.
+    
+PsLoggedon
+    .\PsLoggedon.exe #It can list users that are logged on currently to a system
+    
+PsList
+    pslist #Another command line tool for gathering process information
+    
+PsInfo
+    ./PsInfo.exe #Gathers key system information from both local and remote systems.
+    
+Strings
+    strings #Analyze Windows files using Strings
+    
+Handle
+    ./Handle.exe #Analyze Windows handles process using Handle
+    
