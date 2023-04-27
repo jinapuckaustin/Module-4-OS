@@ -1,0 +1,16 @@
+##get name and sid for all users in the registry
+    get-localuser | select name, sid
+
+  get-childitem HKLM:SOFTWARE\MICROSOFT\Windows\currentversion -> read subkeys
+  get-item HKLM:SOFTWARE\MICROSOFT\Windows\currentversion\run -> key values
+
+##if you see something within the run keys, that is how an advisary establishes persistence!!!
+##run keys are read on startup, login, and powershell startup
+
+#see ALL services on machine | find certain one
+  reg query HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services | findstr spooler
+
+regedit.exe
+    GUI
+    C:\windows\regedit.exe
+    
